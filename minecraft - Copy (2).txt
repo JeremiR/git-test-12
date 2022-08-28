@@ -1,0 +1,941 @@
+git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_12git test_
+12git test_12git test_12git test_12git test_12git test_12git test_12git test_12
+
+For the dripstone features found in caves, see Dripstone Cluster.
+ Dripstone Caves
+Dripstone Caves 1.18.png
+Type	
+Underground
+
+Rarity	
+Common
+
+Temperature	
+0.8‌[Java Edition only]
+0.2‌[Bedrock Edition only]
+
+Blocks	
+Dripstone Block
+Pointed Dripstone
+Water
+Copper Ore
+
+Grass color	
+
+ #91BD59‌[JE only]
+
+ #8AB689‌[BE only]
+
+Foliage color	
+
+ #77AB2F‌[JE only]
+
+ #6DA36B‌[BE only]
+
+Water color	
+
+ #3F76E4‌[JE only]
+
+The dripstone caves biome is an Overworld cave biome filled with clusters and pillars of pointed dripstone and dripstone blocks.
+
+
+Contents
+1	Description
+2	Sounds
+2.1	Music
+3	Data values
+3.1	ID
+4	History
+5	Issues
+6	Trivia
+7	Gallery
+8	References
+9	See also
+exp-player-logo
+00:04 / 01:00
+
+A dripstone cluster.
+
+Dripstone caves generate underground at any height. They favor areas that are far inland, which means they're essentially never found under ocean biomes or while bordering a coast.
+
+Dripstone blocks and pointed dripstone both hanging as stalactites and growing from the ground as stalagmites, small water wells of 1 × 1 blocks are generated in the ground. They mostly appear like regular caves, except with patches of dripstone blocks and pointed dripstone. Large dripstone clusters structures generate occasionally inside ravines. This biome also generates larger copper ore blobs compared to other biomes. Drowned are able to spawn in aquifers.‌[Java Edition only]
+
+When generated through a single biome world, the surface is made entirely out of stone with occasional patches of dripstone.
+
+In Java Edition, the mob spawn rate for dripstone caves is:
+
+Mob	Spawn weight	Group size
+Underground water creature category
+Glow Squid	1	4–6
+Hostile category
+Spider	100⁄611.25	4
+Zombie	95⁄611.25	4
+Drowned	95⁄611.25	4
+Zombie Villager	5⁄611.25	1
+Skeleton	100⁄611.25	4
+Creeper	100⁄611.25	4
+Slime[note 1]	100⁄611.25	4
+Enderman	10⁄611.25	1–4
+Witch	5⁄611.25	1
+Spider Jockey	1⁄611.25	1
+Chicken Jockey	0.25⁄611.25	1
+Ambient category
+Bat	1	8
+ Spawn attempt succeeds only in slime chunks.
+In Bedrock Edition :
+
+Mob	Spawn weight	Group size
+Hostile category
+Spider	99⁄595	1
+Zombie	94.25⁄595	2–4
+Zombie Villager	5⁄595	2–4
+Drowned[note 1]	100⁄595	2–4
+Skeleton	80⁄595	1–2
+Creeper	100⁄595	1
+Slime[note 2]	100⁄595	1
+Enderman	10⁄595	1–2
+Witch	5⁄595	1
+Spider Jockey	1⁄595	1
+Chicken Jockey	0.75⁄595	1
+Passive category
+Glow Squid	1	2–4
+ Currently not working due to an issue with drowned spawning code
+ Spawn attempt succeeds only in slime chunks.
+
+
+
+
+
+
+=======================================================================================================================
+                                               command's
+=======================================================================================================================
+
+Commands, also known as console commands and slash commands, are advanced features activated by typing certain strings of text.
+
+
+Contents
+1	Usage
+2	Command guide
+2.1	Syntax
+2.2	Restrictions
+2.3	Result
+3	List and summary of commands
+3.1	Hidden commands
+3.2	Removed commands
+3.2.1	Other removed commands
+3.2.1.1	Developer command
+3.2.1.2	Agent commands
+4	History
+5	Issues
+6	See also
+7	References
+exp-player-logo
+00:13 / 01:00
+In the client, commands are entered via the chat window, which is displayed by pressing the T / Chat button.png‌[BE only] / D-pad right‌[BE only] or / key. Using the / key also enters the forward-slash that commands require as a prefix, so it is a useful shortcut. The ↑ and ↓ keys can be used to view previously entered text, including all previously executed commands.
+
+When the cursor is at a location corresponding to some types of argument (such as an ID), a list of applicable values appears above the text box. If the argument is already containing some characters, the list displays only those values containing the typed command/text. Pressing Tab ↹ while entering commands cycles through possible commands or arguments, and can be used to auto-enter them.
+
+Commands may also be entered in a multiplayer server's console, but are not preceded by a / when entered this way. A server owner running commands in this way is often referred to as "ghosting".
+
+Commands in command blocks can be preceded by a slash, but it is not required.
+
+Commands can be executed in the following ways;
+
+Entered by a player in the chat window.
+Executed by a command block or Minecart with command block.
+In functions, as part of a data pack or behavior pack.
+In a multiplayer server, entered in the console.
+Click a Json text that has "run_command" action.‌[Java Edition only]
+In behavior packs.‌[Bedrock Edition only]
+Executed with a WebSocket server.‌[Bedrock Edition only]
+Executed by an NPC.‌[Bedrock Edition only]
+Most commands require the executor have a high enough permission level. That means most commands are available in the singleplayer world only if cheats are enabled, and available in multiplayer server only if the player is an operator. See permission level for details.
+
+Note: In Java Edition, in singleplayer worlds where cheats were not enabled at creation, they can be enabled on a temporary basis by opening the current game session to LAN play ( Esc → "Open to LAN", then "Allow Cheats" button and "Start LAN World"). The player does not actually need to be on a LAN or have others join. This is not permanent but allows the use of commands until the player quits the world, and changes the player makes via commands (items spawned, etc.) are saved with the world. The player can do this each time the player starts playing the world again. Note that this disables game pausing for the duration, so while open to LAN, the player should get somewhere safe or reload their world before using the Game Menu. The player can disable the LAN world by reloading the world. To permanently enable cheats, the level.dat has to be edited.
+
+In Bedrock Edition, cheats can be toggled at any time in the "Game" tab of the settings menu. Enabling cheats in a world permanently prevents players from unlocking achievements in that world, even if cheats are later turned off.
+
+Command guide
+Syntax
+In Java Edition:
+
+Syntax	Meaning
+plain text	Enter this literally, exactly as shown.
+<argumentsName>	An argument that should be replaced with an appropriate value.
+[entry]	This entry is optional.
+(entry|entry)	(Required) Pick one of the entries that is shown.
+[entry|entry]	(Optional) Pick one of the entries that is shown.
+ellipsis ...	Another sub-command is required.
+In Bedrock Edition:
+
+Syntax	Meaning
+plain text	Enter this literally, exactly as shown.
+name: type	An argument that should be replaced with an appropriate value.
+entry|entry	Pick one of the entries that is shown.
+<entry>	This entry is required.
+[entry]	This entry is optional.
+ellipsis ...	Another sub-command is required.
+Restrictions
+Some commands have restrictions on who can use the command or in what context.
+None: The command has no restriction.
+Cheat only:‌[Bedrock Edition only] When executed by a player, the command is available only if cheats is enabled.
+In Bedrock Edition, when cheats is disabled, these commands can't be used by players even if they have a high permission level. In Java Edition, if players have a high enough permission level, they can use corresponding commands regardless of whether cheats are allowed.
+Dedicated server only: The command is available only on a dedicated server.
+Result
+After trying to run the command comes different results, including "unparseable", "failed", "successful", "error",‌[Java Edition only] and "Terminate".‌[Java Edition only]
+
+Unparseable
+If the entered command is incomplete or the arguments do not meet required argument types, the command is unparseable.
+When typing a argument into the chat bar, it's noticeable if an argument does not meet the required argument type.
+In Java Edition, if not meet, the argument is marked red and an syntax error message is displayed.
+In Bedrock Edition, when typing in chat bar, if an argument meets the requirements, the next argument in grammar hints turns white from gray. If all arguments (including optional arguments) are entered, the whole grammar hint turns gray from white.
+In Java Edition, it behaves the same as typing in the chat bar when typing in a command block.
+In Bedrock Edition, when entering into a command block, if the command is unparseable, an syntax error message is outputted into its output box after closing the command block screen.
+When trying to execute an unparsable command, an error message is displayed.
+In Java Edition, it is "Unknown or incomplete command" or "Incorrect argument for command".
+In Bedrock Edition, it is "Unknown command" or "Syntax error: unexpected ... at ...".
+If a command in a function file is unparsebale, the function is unable to loaded in game.
+Failed and successful
+A command's Success Conditions must be met in order for the game to consider the command "successful". This is used to determine a variety of things, such as the output of a redstone comparator feeding from a command block with a command. Note that not all "successful" commands actually do something, and not all "failed" commands fail to do something useful.
+Error‌[Java Edition only]
+If an error occurs with the command, it means that there's a noticeable bug on this command.
+Terminate‌[Java Edition only]
+When running a /execute command, if the subcommands specifies 0 execution context, the command does nothing and doesn't output anything.
+For example: /execute as @s run ... in a command block.
+List and summary of commands
+The table below summarizes all commands.
+
+Summary of Commands
+Command	Description	BE	EE	JE	JE OP level	BE&EE OP level	MP only				
+/?	An alias of /help. Provides help for commands.	Yes	Yes	Removed	0	0	—	—	—	—	—
+/ability	Grants or revokes a player ability.	Yes	Yes	—	—	1	—	—	—		—
+/advancement	Gives, removes, or checks player advancements.	—	—	Yes	2	—	—	—	—		—
+/alwaysday	An alias of /daylock. Locks and unlocks the day-night cycle.	Yes	Yes	—	—	1	—	—	—	—	
+/attribute	Queries, adds, removes or sets an entity attribute.	—	—	Yes	2	—	—	—			—
+/ban	Adds player to banlist.	—	—	Yes	3	—	MP	—	—		—
+/ban-ip	Adds IP address to banlist.	—	—	Yes	3	—	MP	—	—		—
+/banlist	Displays banlist.	—	—	Yes	3	—	MP	—	—		—
+/bossbar	Creates and modifies bossbars.	—	—	Yes	2	—	—	—	—		
+/camerashake	Used to enable a camera shaking effect.	Yes	Yes	—	—	1	—	—	—		—
+/changesetting	Changes a setting on the dedicated server while it's running.	Yes	—	—	—	4	MP	—	—	—	—
+/clear	Clears items from player inventory.	Yes	Yes	Yes	2	1	—	—	—		—
+/clearspawnpoint	Remove spawnpoints in the world.	Yes	Yes	—	—	1	—	—	—	—	
+/clone	Copies blocks from one place to another.	Yes	Yes	Yes	2	1	—		—	—	—
+/connect	An alias of /wsserver. Attempts to connect to the websocket server.	Yes	Yes	—	—	0‌[EE only]
+2‌[BE only]	—	—	—	—	—
+/damage	Applies damage to the specified entities.	Yes	—	—	—	1	—	—			—
+/data	Gets, merges, modifies and removes block entity and entity NBT data.	—	—	Yes	2	—	—				—
+/datapack	Controls loaded data packs.	—	—	Yes	2	—	—	—	—	—	
+/daylock	An alias of /alwaysday. Locks and unlocks the day-night cycle.	Yes	Yes	—	—	1	—	—	—	—	
+/debug	Starts or stops a debugging session.	—	—	Yes	3	—	—	—	—	—	—
+/dedicatedwsserver	Attempts to connect to the websocket server.	Yes	—	—	—	0	MP	—	—	—	—
+/defaultgamemode	Sets the default game mode.	—	—	Yes	2	—	—	—	—	—	
+/deop	Revokes operator status from a player.	Yes	Yes	Yes	3	2	MP‌[Java Edition only]	—	—		—
+/dialogue	Opens NPC dialogue for a player.	Yes	Yes	—	—	1	—	—	—		—
+/difficulty	Sets the difficulty level.	Yes	Yes	Yes	2	1	—	—	—	—	
+/effect	Adds or removes status effects.	Yes	Yes	Yes	2	1	—	—			—
+/enchant	Adds an enchantment to a player's selected item.	Yes	Yes	Yes	2	1	—	—	—		—
+/event	Used to trigger an event on an entity.	Yes	—	—	—	1	—	—			—
+/execute	Executes another command.	Yes	Yes	Yes	2	1	—				
+/experience	An alias of /xp. Adds or removes player experience.	—	—	Yes	2	—	—	—	—		—
+/fill	Fills a region with a specific block.	Yes	Yes	Yes	2	1	—		—	—	—
+/fog	Used for managing active fog settings for players.	Yes	—	—	—	1	—	—	—		—
+/forceload	Forces chunks to constantly be loaded or not.	—	—	Yes	2	—	—	—	—	—	
+/function	Runs a function.	Yes	Yes	Yes	2	1	—	—	—	—	
+/gamemode	Sets a player's game mode.	Yes	Yes	Yes	2	1	—	—	—		—
+/gamerule	Sets or queries a game rule value.	Yes	Yes	Yes	2	1	—	—	—	—	
+/gametest	To test the GameTest features.	Yes	—	—	—	1	—	—	—	—	—
+/give	Gives an item to a player.	Yes	Yes	Yes	2	1	—	—	—		—
+/help	An alias of /?. Provides help for commands.	Yes	Yes	Yes	0	0	—	—	—	—	—
+/immutableworld	Allows setting immutable state of a world.	Yes	Yes	—	—	1	—	—	—	—	
+/item	Manipulates items in inventories.	—	—	Yes	2	—	—				—
+/jfr	Starts or stops a JFR profiling.	—	—	Yes	4	—	—	—	—	—	—
+/kick	Kicks a player off a server.	Yes	Yes	Yes	3	1	—	—	—		—
+/kill	Kills entities (players, mobs, items, etc.).	Yes	Yes	Yes	2	1	—	—			—
+/list	Lists players on the server.	Yes	Yes	Yes	0	0	—	—	—		—
+/locate	Locates closest structure, biome, or point of interest.	Yes	Yes	Yes	2	1	—			—	
+/loot	Drops items from an inventory slot onto the ground.	Yes	—	Yes	2	2	—				—
+/me	Displays a message about the sender.	Yes	Yes	Yes	0	0	—	—	—		—
+/mobevent	Enables/disables a specified mob event.	Yes	Yes	—	—	1	—	—	—		—
+/msg	An alias of /tell and /w. Displays a private message to other players.	Yes	Yes	Yes	0	0	—	—	—		—
+/music	Allows the player to control playing music tracks.	Yes	—	—	—	1	—	—	—		—
+/op	Grants operator status to a player.	Yes	Yes	Yes	3	2	MP‌[Java Edition only]	—	—		—
+/ops	An alias of /permission. Reloads and applies permissions.	Yes	Yes	—	—	4	MP	—	—		—
+/pardon	Removes entries from the banlist.	—	—	Yes	3	—	MP	—	—		—
+/pardon-ip	Removes entries from the banlist.	—	—	Yes	3	—	MP	—	—		—
+/particle	Creates particles.	Yes	Yes	Yes	2	1	—	—	—		—
+/perf	Captures info and metrics about the game for 10 seconds.	—	—	Yes	4	—	MP	—	—	—	
+/permission	An alias of /ops. Reloads and applies permissions.	Yes	Yes	—	—	4	MP	—	—		—
+/place	Used to place a configured feature, jigsaw, template, or structure at a given location.	—	—	Yes	2	—	—		—	—	
+/playanimation	Used to run a one-off animation.	Yes	—	—	—	1	—	—			—
+/playsound	Plays a sound.	Yes	Yes	Yes	2	1	—	—	—		—
+/publish	Opens single-player world to local network.	—	—	Yes	4	—	SP only	—	—	—	
+/recipe	Gives or takes player recipes.	—	—	Yes	2	—	—	—	—		—
+/reload	Reloads loot tables, advancements, and functions from disk.	Yes	Yes	Yes	2	2	—	—	—	—	
+/remove	Removing agent.	—	?	—	—	2	—	—		—	—
+/replaceitem	Replaces items in inventories.	Yes	Yes	Removed	2	1	—				—
+/ride	Used to make entities ride other entities, stop entities from riding, make rides evict their riders, or summon rides or riders.	Yes	—	—	—	1	—	—			—
+/save	Prepares a backup, queries its status, or resumes.	Yes	—	—	—	4	MP	—	—	—	
+/save-all	Saves the server to disk.	—	—	Yes	4	—	MP	—	—	—	
+/save-off	Disables automatic server saves.	—	—	Yes	4	—	MP	—	—	—	
+/save-on	Enables automatic server saves.	—	—	Yes	4	—	MP	—	—	—	
+/say	Displays a message to multiple players.	Yes	Yes	Yes	2	1	—	—	—		—
+/schedule	Delays the execution of a function.	Yes	—	Yes	2	1	—	—	—	—	—
+/scoreboard	Manages scoreboard objectives and players.	Yes	Yes	Yes	2	1	—	—			—
+/seed	Displays the world seed.	—	—	Yes	0 in singleplayer
+2 in multiplayer	—	—	—	—	—	
+/setblock	Changes a block to another block.	Yes	Yes	Yes	2	1	—		—	—	—
+/setidletimeout	Sets the time before idle players are kicked.	—	—	Yes	3	—	MP	—	—		—
+/setmaxplayers	Sets the maximum number of players allowed to join.	Yes	Yes	—	—	3	—	—	—		—
+/setworldspawn	Sets the world spawn.	Yes	Yes	Yes	2	1	—	—	—	—	
+/spawnpoint	Sets the spawn point for a player.	Yes	Yes	Yes	2	1	—	—	—		—
+/spectate	Make one player in spectator mode spectate an entity.	—	—	Yes	2	—	—	—	—		—
+/spreadplayers	Teleports entities to random locations.	Yes	Yes	Yes	2	1	—	—			—
+/stop	Stops a server.	Yes	—	Yes	4	4	MP	—	—	—	
+/stopsound	Stops a sound.	Yes	Yes	Yes	2	1	—	—	—		—
+/structure	Used to save and load structures without having to use structure blocks items in inventories.	Yes	—	—	—	1	—			—	
+/summon	Summons an entity.	Yes	Yes	Yes	2	1	—	—		—	—
+/tag	Controls entity tags.	Yes	Yes	Yes	2	1	—	—			—
+/team	Controls teams.	—	—	Yes	2	—	—	—			—
+/teammsg	An alias of /tm. Specifies the message to send to team.	—	—	Yes	0	—	—	—	—		—
+/teleport	An alias of /tp. Teleports entities.	Yes	Yes	Yes	2	1	—	—			—
+/tell	An alias of /msg and /w. Displays a private message to other players.	Yes	Yes	Yes	0	0	—	—	—		—
+/tellraw	Displays a JSON message to players.	Yes	Yes	Yes	2	1	—	—	—		—
+/testfor	Counts entities matching specified conditions.	Yes	Yes	Removed	2	1	—	—			—
+/testforblock	Tests whether a block is in a location.	Yes	Yes	Removed	2	1	—		—	—	—
+/testforblocks	Tests whether the blocks in two regions match.	Yes	Yes	Removed	2	1	—		—	—	—
+/tickingarea	Add, remove, or list ticking areas.	Yes	Yes	—	—	1	—	—	—	—	
+/time	Changes or queries the world's game time.	Yes	Yes	Yes	2	1	—	—	—	—	
+/title	Manages screen titles.	Yes	Yes	Yes	2	1	—	—	—		—
+/titleraw	Controls screen titles with JSON messages.	Yes	Yes	—	—	1	—	—	—		—
+/tm	An alias of /teammsg. Specifies the message to send to team.	—	—	Yes	0	—	—	—	—		—
+/toggledownfall	Toggles the weather.	Yes	Yes	Removed	2	1	—	—	—	—	
+/tp	An alias of /teleport. Teleports entities.	Yes	Yes	Yes	2	1	—	—			—
+/trigger	Sets a trigger to be activated.	—	—	Yes	0	—	—	—	—		—
+/volumearea	Add, remove, or list volume areas.	Yes	—	—	—	1	—	—	—	—	
+/w	An alias of /tell and /msg. Displays a private message to other players.	Yes	Yes	Yes	0	0	—	—	—		—
+/warden_spawn_tracker	Sets the spawn state of the Warden.	—	—	Removed	2	—	—	—	—	—	
+/wb	An alias of /worldbuilder. Ability to edit restricted blocks.	Yes	Yes	—	—	1	—	—	—	—	
+/weather	Sets the weather.	Yes	Yes	Yes	2	1	—	—	—	—	
+/whitelist	Manages server whitelist.	Yes	—	Yes	3	4	MP	—	—		—
+/worldborder	Manages the world border.	—	—	Yes	2	—	—	—	—	—	
+/worldbuilder	An alias of /wb. Ability to edit restricted blocks.	Yes	Yes	—	—	1	—	—	—	—	
+/wsserver	An alias of /connect. Attempts to connect to the websocket server.	Yes	Yes	—	—	0‌[EE only]
+2‌[BE only]	—	—	—	—	—
+/xp	An alias of /experience‌[Java Edition only]. Adds or removes player experience.	Yes	Yes	Yes	2	1	—	—	—		—
+Hidden commands
+Information icon.svg
+This feature is exclusive to Bedrock Edition. 
+These commands are unavailable in general cases. Most of them can be accessed with a Websocket Server.
+
+Summary of Hidden Commands
+Command	Description	BE	EE	
+BE&EE OP level
+
+MP only				[]
+Removed commands
+Summary of Removed Commands
+Command	Description	Version Removed	Reason for Deletion	BE	EE	JE	JE OP level	BE&EE OP level	MP Only				[]
+Other removed commands
+Developer command
+Main article: developer commands
+Information icon.svg
+This feature is exclusive to Bedrock Edition and Education Edition. 
+Developer commands are only enabled in internal development builds of Bedrock Edition, and are not normally present in release versions.
+
+Agent commands
+Hydrogen.png
+This section describes an education-related feature. 
+This feature is available only in Education Edition or when enabling the "Education Edition" option in Bedrock Edition.
+Superseded by /agent
+
+/move
+/turn
+/attack
+/destroy
+/drop
+/dropall
+/inspect
+/inspectdata
+/detect
+/detectredstone
+/transfer
+/createagent
+/tpagent
+/collect
+/till
+/place
+/getitemcount
+/getitemspace
+/getitemdetail
+
+
+
+
+LUSH CAVES
+
+
+Lush caves generate underground at any height. They favor generating underneath biomes with high humidity values, which makes them most commonly found beneath dark forests, jungles, old growth taigas and wooded badlands. It is not possible for lush caves to generate beneath forests and grassland biomes like plains and savanna as they are not humid enough. Lush caves can sometimes generate beneath oceans and deserts.
+
+Azalea trees generate on any empty space above a lush cave, with roots consisting of rooted dirt and hanging roots that generate down until reaching the lush cave. This is most common at the surface, but they can sometimes generate inside caves if there is enough room.
+
+Underground, moss and ores covers the floors and ceilings, along with moss carpets, grass and azalea bushes on the floors. On the ceiling, vines and cave vines with glow berries grow down and light up the caves, and spore blossoms grow from the ceiling and drip water particles. A lush cave contains springs and shallow lakes with clay where dripleaf plants grow out of them. Sometimes these lakes generate dry.
+
+Players cannot spawn in a lush caves biome during the world generation.
+
+Bats, glow squid, tropical fish, and axolotls are the only passive mobs that spawn, with the latter being exclusive to the biome. While hostile mobs can spawn throughout the biome, many areas have a light level greater than 0 due to the pervasive glow berries. Most hostile mobs are therefore found in large caverns more than 10 blocks high and near borders with other cave biomes.
+
+In Java Edition, the mob spawn rate for lush caves is:
+
+Mob	Spawn weight	Group size
+Water ambient category
+Tropical Fish	1	8
+Underground water creature category
+Glow Squid	1	4–6
+Axolotl category
+Axolotl	1	4–6
+Ambient category
+Bat	1	8
+Hostile category
+Spider	100⁄516.25	4
+Zombie	95⁄516.25	4
+Zombie Villager	5⁄516.25	1
+Skeleton	100⁄516.25	4
+Creeper	100⁄516.25	4
+Slime[note 1]	100⁄516.25	4
+Enderman	10⁄516.25	1–4
+Witch	5⁄516.25	1
+Spider Jockey	1⁄516.25	1
+Chicken Jockey	0.25⁄516.25	1
+ Spawn attempt succeeds only in slime chunks.
+
+In Bedrock Edition :
+
+Mob	Spawn weight	Group size
+Water category
+Axolotl	10⁄110	4–6
+Tropical Fish[note 1]	25⁄110	1–3
+Tropical Fish[note 1]	75⁄110	3–5
+Passive category
+Glow Squid	1	2–4
+Hostile category
+Spider	99⁄495	1
+Zombie	94.25⁄495	2–4
+Zombie Villager	5⁄495	2–4
+Skeleton	80⁄495	1–2
+Creeper	100⁄495	1
+Slime[note 2]	100⁄495	1
+Enderman	10⁄495	1–2
+Witch	5⁄495	1
+Spider Jockey	1⁄495	1
+Chicken Jockey	0.75⁄495	1
+ Tropical fish try to spawn twice, one for random pattern and another try for 1 of 22 unique pattern.
+ Spawn attempt succeeds only in slime chunks.
+
+
+
+Amethyst Geode
+EDIT
+Amethyst Geode
+Amethyst Geode.png
+Amethyst Geode uncracked.png
+Biomes	
+Any Overworld biome
+
+Consists of	
+[]
+An amethyst geode is a structure-like terrain feature found in the underground of the Overworld. Amethyst geodes contain smooth basalt, calcite, and are the only source of amethyst items and blocks.
+
+
+Contents
+1	Generation
+2	Structure
+3	Data values
+3.1	ID
+4	History
+5	Issues
+6	Gallery
+6.1	Concept artwork
+6.2	Odd generation
+7	References
+exp-player-logo
+00:11 / 01:00
+Generation
+Amethyst geodes generate between Y=-64 and Y=30 regardless of whether "generate structures" is toggled on or off. Each chunk has a 1⁄24 chance to generate a geode. They override only caverns and mineshafts. Sometimes they are exposed on the surface, such as on beaches and underwater in oceans.
+
+Amethyst geodes consist of three layers: an outer layer of smooth basalt, a middle layer of calcite, and a hollow layer of primarily amethyst blocks, with 8.3% replaced by budding amethyst blocks instead. Amethyst crystals generate within the structure on budding amethyst. Geodes have a 95% chance of generating with a crack, exposing its inside. Caves, aquifers, and canyons cannot cut into geodes,[1] and as such are often obstructed by them, except in cases where the crack intersects a cavern.
+
+For the dripstone features found in caves, see Dripstone Cluster.
+ Dripstone Caves
+Dripstone Caves 1.18.png
+Type	
+Underground
+
+Rarity	
+Common
+
+Temperature	
+0.8‌[Java Edition only]
+0.2‌[Bedrock Edition only]
+
+Blocks	
+Dripstone Block
+Pointed Dripstone
+Water
+Copper Ore
+
+Grass color	
+
+ #91BD59‌[JE only]
+
+ #8AB689‌[BE only]
+
+Foliage color	
+
+ #77AB2F‌[JE only]
+
+ #6DA36B‌[BE only]
+
+Water color	
+
+ #3F76E4‌[JE only]
+
+The dripstone caves biome is an Overworld cave biome filled with clusters and pillars of pointed dripstone and dripstone blocks.
+
+
+Contents
+1	Description
+2	Sounds
+2.1	Music
+3	Data values
+3.1	ID
+4	History
+5	Issues
+6	Trivia
+7	Gallery
+8	References
+9	See also
+exp-player-logo
+00:04 / 01:00
+
+A dripstone cluster.
+
+Dripstone caves generate underground at any height. They favor areas that are far inland, which means they're essentially never found under ocean biomes or while bordering a coast.
+
+Dripstone blocks and pointed dripstone both hanging as stalactites and growing from the ground as stalagmites, small water wells of 1 × 1 blocks are generated in the ground. They mostly appear like regular caves, except with patches of dripstone blocks and pointed dripstone. Large dripstone clusters structures generate occasionally inside ravines. This biome also generates larger copper ore blobs compared to other biomes. Drowned are able to spawn in aquifers.‌[Java Edition only]
+
+When generated through a single biome world, the surface is made entirely out of stone with occasional patches of dripstone.
+
+In Java Edition, the mob spawn rate for dripstone caves is:
+
+Mob	Spawn weight	Group size
+Underground water creature category
+Glow Squid	1	4–6
+Hostile category
+Spider	100⁄611.25	4
+Zombie	95⁄611.25	4
+Drowned	95⁄611.25	4
+Zombie Villager	5⁄611.25	1
+Skeleton	100⁄611.25	4
+Creeper	100⁄611.25	4
+Slime[note 1]	100⁄611.25	4
+Enderman	10⁄611.25	1–4
+Witch	5⁄611.25	1
+Spider Jockey	1⁄611.25	1
+Chicken Jockey	0.25⁄611.25	1
+Ambient category
+Bat	1	8
+ Spawn attempt succeeds only in slime chunks.
+In Bedrock Edition :
+
+Mob	Spawn weight	Group size
+Hostile category
+Spider	99⁄595	1
+Zombie	94.25⁄595	2–4
+Zombie Villager	5⁄595	2–4
+Drowned[note 1]	100⁄595	2–4
+Skeleton	80⁄595	1–2
+Creeper	100⁄595	1
+Slime[note 2]	100⁄595	1
+Enderman	10⁄595	1–2
+Witch	5⁄595	1
+Spider Jockey	1⁄595	1
+Chicken Jockey	0.75⁄595	1
+Passive category
+Glow Squid	1	2–4
+ Currently not working due to an issue with drowned spawning code
+ Spawn attempt succeeds only in slime chunks.
+
+
+
+
+
+
+=======================================================================================================================
+                                               command's
+=======================================================================================================================
+
+Commands, also known as console commands and slash commands, are advanced features activated by typing certain strings of text.
+
+
+Contents
+1	Usage
+2	Command guide
+2.1	Syntax
+2.2	Restrictions
+2.3	Result
+3	List and summary of commands
+3.1	Hidden commands
+3.2	Removed commands
+3.2.1	Other removed commands
+3.2.1.1	Developer command
+3.2.1.2	Agent commands
+4	History
+5	Issues
+6	See also
+7	References
+exp-player-logo
+00:13 / 01:00
+In the client, commands are entered via the chat window, which is displayed by pressing the T / Chat button.png‌[BE only] / D-pad right‌[BE only] or / key. Using the / key also enters the forward-slash that commands require as a prefix, so it is a useful shortcut. The ↑ and ↓ keys can be used to view previously entered text, including all previously executed commands.
+
+When the cursor is at a location corresponding to some types of argument (such as an ID), a list of applicable values appears above the text box. If the argument is already containing some characters, the list displays only those values containing the typed command/text. Pressing Tab ↹ while entering commands cycles through possible commands or arguments, and can be used to auto-enter them.
+
+Commands may also be entered in a multiplayer server's console, but are not preceded by a / when entered this way. A server owner running commands in this way is often referred to as "ghosting".
+
+Commands in command blocks can be preceded by a slash, but it is not required.
+
+Commands can be executed in the following ways;
+
+Entered by a player in the chat window.
+Executed by a command block or Minecart with command block.
+In functions, as part of a data pack or behavior pack.
+In a multiplayer server, entered in the console.
+Click a Json text that has "run_command" action.‌[Java Edition only]
+In behavior packs.‌[Bedrock Edition only]
+Executed with a WebSocket server.‌[Bedrock Edition only]
+Executed by an NPC.‌[Bedrock Edition only]
+Most commands require the executor have a high enough permission level. That means most commands are available in the singleplayer world only if cheats are enabled, and available in multiplayer server only if the player is an operator. See permission level for details.
+
+Note: In Java Edition, in singleplayer worlds where cheats were not enabled at creation, they can be enabled on a temporary basis by opening the current game session to LAN play ( Esc → "Open to LAN", then "Allow Cheats" button and "Start LAN World"). The player does not actually need to be on a LAN or have others join. This is not permanent but allows the use of commands until the player quits the world, and changes the player makes via commands (items spawned, etc.) are saved with the world. The player can do this each time the player starts playing the world again. Note that this disables game pausing for the duration, so while open to LAN, the player should get somewhere safe or reload their world before using the Game Menu. The player can disable the LAN world by reloading the world. To permanently enable cheats, the level.dat has to be edited.
+
+In Bedrock Edition, cheats can be toggled at any time in the "Game" tab of the settings menu. Enabling cheats in a world permanently prevents players from unlocking achievements in that world, even if cheats are later turned off.
+
+Command guide
+Syntax
+In Java Edition:
+
+Syntax	Meaning
+plain text	Enter this literally, exactly as shown.
+<argumentsName>	An argument that should be replaced with an appropriate value.
+[entry]	This entry is optional.
+(entry|entry)	(Required) Pick one of the entries that is shown.
+[entry|entry]	(Optional) Pick one of the entries that is shown.
+ellipsis ...	Another sub-command is required.
+In Bedrock Edition:
+
+Syntax	Meaning
+plain text	Enter this literally, exactly as shown.
+name: type	An argument that should be replaced with an appropriate value.
+entry|entry	Pick one of the entries that is shown.
+<entry>	This entry is required.
+[entry]	This entry is optional.
+ellipsis ...	Another sub-command is required.
+Restrictions
+Some commands have restrictions on who can use the command or in what context.
+None: The command has no restriction.
+Cheat only:‌[Bedrock Edition only] When executed by a player, the command is available only if cheats is enabled.
+In Bedrock Edition, when cheats is disabled, these commands can't be used by players even if they have a high permission level. In Java Edition, if players have a high enough permission level, they can use corresponding commands regardless of whether cheats are allowed.
+Dedicated server only: The command is available only on a dedicated server.
+Result
+After trying to run the command comes different results, including "unparseable", "failed", "successful", "error",‌[Java Edition only] and "Terminate".‌[Java Edition only]
+
+Unparseable
+If the entered command is incomplete or the arguments do not meet required argument types, the command is unparseable.
+When typing a argument into the chat bar, it's noticeable if an argument does not meet the required argument type.
+In Java Edition, if not meet, the argument is marked red and an syntax error message is displayed.
+In Bedrock Edition, when typing in chat bar, if an argument meets the requirements, the next argument in grammar hints turns white from gray. If all arguments (including optional arguments) are entered, the whole grammar hint turns gray from white.
+In Java Edition, it behaves the same as typing in the chat bar when typing in a command block.
+In Bedrock Edition, when entering into a command block, if the command is unparseable, an syntax error message is outputted into its output box after closing the command block screen.
+When trying to execute an unparsable command, an error message is displayed.
+In Java Edition, it is "Unknown or incomplete command" or "Incorrect argument for command".
+In Bedrock Edition, it is "Unknown command" or "Syntax error: unexpected ... at ...".
+If a command in a function file is unparsebale, the function is unable to loaded in game.
+Failed and successful
+A command's Success Conditions must be met in order for the game to consider the command "successful". This is used to determine a variety of things, such as the output of a redstone comparator feeding from a command block with a command. Note that not all "successful" commands actually do something, and not all "failed" commands fail to do something useful.
+Error‌[Java Edition only]
+If an error occurs with the command, it means that there's a noticeable bug on this command.
+Terminate‌[Java Edition only]
+When running a /execute command, if the subcommands specifies 0 execution context, the command does nothing and doesn't output anything.
+For example: /execute as @s run ... in a command block.
+List and summary of commands
+The table below summarizes all commands.
+
+Summary of Commands
+Command	Description	BE	EE	JE	JE OP level	BE&EE OP level	MP only				
+/?	An alias of /help. Provides help for commands.	Yes	Yes	Removed	0	0	—	—	—	—	—
+/ability	Grants or revokes a player ability.	Yes	Yes	—	—	1	—	—	—		—
+/advancement	Gives, removes, or checks player advancements.	—	—	Yes	2	—	—	—	—		—
+/alwaysday	An alias of /daylock. Locks and unlocks the day-night cycle.	Yes	Yes	—	—	1	—	—	—	—	
+/attribute	Queries, adds, removes or sets an entity attribute.	—	—	Yes	2	—	—	—			—
+/ban	Adds player to banlist.	—	—	Yes	3	—	MP	—	—		—
+/ban-ip	Adds IP address to banlist.	—	—	Yes	3	—	MP	—	—		—
+/banlist	Displays banlist.	—	—	Yes	3	—	MP	—	—		—
+/bossbar	Creates and modifies bossbars.	—	—	Yes	2	—	—	—	—		
+/camerashake	Used to enable a camera shaking effect.	Yes	Yes	—	—	1	—	—	—		—
+/changesetting	Changes a setting on the dedicated server while it's running.	Yes	—	—	—	4	MP	—	—	—	—
+/clear	Clears items from player inventory.	Yes	Yes	Yes	2	1	—	—	—		—
+/clearspawnpoint	Remove spawnpoints in the world.	Yes	Yes	—	—	1	—	—	—	—	
+/clone	Copies blocks from one place to another.	Yes	Yes	Yes	2	1	—		—	—	—
+/connect	An alias of /wsserver. Attempts to connect to the websocket server.	Yes	Yes	—	—	0‌[EE only]
+2‌[BE only]	—	—	—	—	—
+/damage	Applies damage to the specified entities.	Yes	—	—	—	1	—	—			—
+/data	Gets, merges, modifies and removes block entity and entity NBT data.	—	—	Yes	2	—	—				—
+/datapack	Controls loaded data packs.	—	—	Yes	2	—	—	—	—	—	
+/daylock	An alias of /alwaysday. Locks and unlocks the day-night cycle.	Yes	Yes	—	—	1	—	—	—	—	
+/debug	Starts or stops a debugging session.	—	—	Yes	3	—	—	—	—	—	—
+/dedicatedwsserver	Attempts to connect to the websocket server.	Yes	—	—	—	0	MP	—	—	—	—
+/defaultgamemode	Sets the default game mode.	—	—	Yes	2	—	—	—	—	—	
+/deop	Revokes operator status from a player.	Yes	Yes	Yes	3	2	MP‌[Java Edition only]	—	—		—
+/dialogue	Opens NPC dialogue for a player.	Yes	Yes	—	—	1	—	—	—		—
+/difficulty	Sets the difficulty level.	Yes	Yes	Yes	2	1	—	—	—	—	
+/effect	Adds or removes status effects.	Yes	Yes	Yes	2	1	—	—			—
+/enchant	Adds an enchantment to a player's selected item.	Yes	Yes	Yes	2	1	—	—	—		—
+/event	Used to trigger an event on an entity.	Yes	—	—	—	1	—	—			—
+/execute	Executes another command.	Yes	Yes	Yes	2	1	—				
+/experience	An alias of /xp. Adds or removes player experience.	—	—	Yes	2	—	—	—	—		—
+/fill	Fills a region with a specific block.	Yes	Yes	Yes	2	1	—		—	—	—
+/fog	Used for managing active fog settings for players.	Yes	—	—	—	1	—	—	—		—
+/forceload	Forces chunks to constantly be loaded or not.	—	—	Yes	2	—	—	—	—	—	
+/function	Runs a function.	Yes	Yes	Yes	2	1	—	—	—	—	
+/gamemode	Sets a player's game mode.	Yes	Yes	Yes	2	1	—	—	—		—
+/gamerule	Sets or queries a game rule value.	Yes	Yes	Yes	2	1	—	—	—	—	
+/gametest	To test the GameTest features.	Yes	—	—	—	1	—	—	—	—	—
+/give	Gives an item to a player.	Yes	Yes	Yes	2	1	—	—	—		—
+/help	An alias of /?. Provides help for commands.	Yes	Yes	Yes	0	0	—	—	—	—	—
+/immutableworld	Allows setting immutable state of a world.	Yes	Yes	—	—	1	—	—	—	—	
+/item	Manipulates items in inventories.	—	—	Yes	2	—	—				—
+/jfr	Starts or stops a JFR profiling.	—	—	Yes	4	—	—	—	—	—	—
+/kick	Kicks a player off a server.	Yes	Yes	Yes	3	1	—	—	—		—
+/kill	Kills entities (players, mobs, items, etc.).	Yes	Yes	Yes	2	1	—	—			—
+/list	Lists players on the server.	Yes	Yes	Yes	0	0	—	—	—		—
+/locate	Locates closest structure, biome, or point of interest.	Yes	Yes	Yes	2	1	—			—	
+/loot	Drops items from an inventory slot onto the ground.	Yes	—	Yes	2	2	—				—
+/me	Displays a message about the sender.	Yes	Yes	Yes	0	0	—	—	—		—
+/mobevent	Enables/disables a specified mob event.	Yes	Yes	—	—	1	—	—	—		—
+/msg	An alias of /tell and /w. Displays a private message to other players.	Yes	Yes	Yes	0	0	—	—	—		—
+/music	Allows the player to control playing music tracks.	Yes	—	—	—	1	—	—	—		—
+/op	Grants operator status to a player.	Yes	Yes	Yes	3	2	MP‌[Java Edition only]	—	—		—
+/ops	An alias of /permission. Reloads and applies permissions.	Yes	Yes	—	—	4	MP	—	—		—
+/pardon	Removes entries from the banlist.	—	—	Yes	3	—	MP	—	—		—
+/pardon-ip	Removes entries from the banlist.	—	—	Yes	3	—	MP	—	—		—
+/particle	Creates particles.	Yes	Yes	Yes	2	1	—	—	—		—
+/perf	Captures info and metrics about the game for 10 seconds.	—	—	Yes	4	—	MP	—	—	—	
+/permission	An alias of /ops. Reloads and applies permissions.	Yes	Yes	—	—	4	MP	—	—		—
+/place	Used to place a configured feature, jigsaw, template, or structure at a given location.	—	—	Yes	2	—	—		—	—	
+/playanimation	Used to run a one-off animation.	Yes	—	—	—	1	—	—			—
+/playsound	Plays a sound.	Yes	Yes	Yes	2	1	—	—	—		—
+/publish	Opens single-player world to local network.	—	—	Yes	4	—	SP only	—	—	—	
+/recipe	Gives or takes player recipes.	—	—	Yes	2	—	—	—	—		—
+/reload	Reloads loot tables, advancements, and functions from disk.	Yes	Yes	Yes	2	2	—	—	—	—	
+/remove	Removing agent.	—	?	—	—	2	—	—		—	—
+/replaceitem	Replaces items in inventories.	Yes	Yes	Removed	2	1	—				—
+/ride	Used to make entities ride other entities, stop entities from riding, make rides evict their riders, or summon rides or riders.	Yes	—	—	—	1	—	—			—
+/save	Prepares a backup, queries its status, or resumes.	Yes	—	—	—	4	MP	—	—	—	
+/save-all	Saves the server to disk.	—	—	Yes	4	—	MP	—	—	—	
+/save-off	Disables automatic server saves.	—	—	Yes	4	—	MP	—	—	—	
+/save-on	Enables automatic server saves.	—	—	Yes	4	—	MP	—	—	—	
+/say	Displays a message to multiple players.	Yes	Yes	Yes	2	1	—	—	—		—
+/schedule	Delays the execution of a function.	Yes	—	Yes	2	1	—	—	—	—	—
+/scoreboard	Manages scoreboard objectives and players.	Yes	Yes	Yes	2	1	—	—			—
+/seed	Displays the world seed.	—	—	Yes	0 in singleplayer
+2 in multiplayer	—	—	—	—	—	
+/setblock	Changes a block to another block.	Yes	Yes	Yes	2	1	—		—	—	—
+/setidletimeout	Sets the time before idle players are kicked.	—	—	Yes	3	—	MP	—	—		—
+/setmaxplayers	Sets the maximum number of players allowed to join.	Yes	Yes	—	—	3	—	—	—		—
+/setworldspawn	Sets the world spawn.	Yes	Yes	Yes	2	1	—	—	—	—	
+/spawnpoint	Sets the spawn point for a player.	Yes	Yes	Yes	2	1	—	—	—		—
+/spectate	Make one player in spectator mode spectate an entity.	—	—	Yes	2	—	—	—	—		—
+/spreadplayers	Teleports entities to random locations.	Yes	Yes	Yes	2	1	—	—			—
+/stop	Stops a server.	Yes	—	Yes	4	4	MP	—	—	—	
+/stopsound	Stops a sound.	Yes	Yes	Yes	2	1	—	—	—		—
+/structure	Used to save and load structures without having to use structure blocks items in inventories.	Yes	—	—	—	1	—			—	
+/summon	Summons an entity.	Yes	Yes	Yes	2	1	—	—		—	—
+/tag	Controls entity tags.	Yes	Yes	Yes	2	1	—	—			—
+/team	Controls teams.	—	—	Yes	2	—	—	—			—
+/teammsg	An alias of /tm. Specifies the message to send to team.	—	—	Yes	0	—	—	—	—		—
+/teleport	An alias of /tp. Teleports entities.	Yes	Yes	Yes	2	1	—	—			—
+/tell	An alias of /msg and /w. Displays a private message to other players.	Yes	Yes	Yes	0	0	—	—	—		—
+/tellraw	Displays a JSON message to players.	Yes	Yes	Yes	2	1	—	—	—		—
+/testfor	Counts entities matching specified conditions.	Yes	Yes	Removed	2	1	—	—			—
+/testforblock	Tests whether a block is in a location.	Yes	Yes	Removed	2	1	—		—	—	—
+/testforblocks	Tests whether the blocks in two regions match.	Yes	Yes	Removed	2	1	—		—	—	—
+/tickingarea	Add, remove, or list ticking areas.	Yes	Yes	—	—	1	—	—	—	—	
+/time	Changes or queries the world's game time.	Yes	Yes	Yes	2	1	—	—	—	—	
+/title	Manages screen titles.	Yes	Yes	Yes	2	1	—	—	—		—
+/titleraw	Controls screen titles with JSON messages.	Yes	Yes	—	—	1	—	—	—		—
+/tm	An alias of /teammsg. Specifies the message to send to team.	—	—	Yes	0	—	—	—	—		—
+/toggledownfall	Toggles the weather.	Yes	Yes	Removed	2	1	—	—	—	—	
+/tp	An alias of /teleport. Teleports entities.	Yes	Yes	Yes	2	1	—	—			—
+/trigger	Sets a trigger to be activated.	—	—	Yes	0	—	—	—	—		—
+/volumearea	Add, remove, or list volume areas.	Yes	—	—	—	1	—	—	—	—	
+/w	An alias of /tell and /msg. Displays a private message to other players.	Yes	Yes	Yes	0	0	—	—	—		—
+/warden_spawn_tracker	Sets the spawn state of the Warden.	—	—	Removed	2	—	—	—	—	—	
+/wb	An alias of /worldbuilder. Ability to edit restricted blocks.	Yes	Yes	—	—	1	—	—	—	—	
+/weather	Sets the weather.	Yes	Yes	Yes	2	1	—	—	—	—	
+/whitelist	Manages server whitelist.	Yes	—	Yes	3	4	MP	—	—		—
+/worldborder	Manages the world border.	—	—	Yes	2	—	—	—	—	—	
+/worldbuilder	An alias of /wb. Ability to edit restricted blocks.	Yes	Yes	—	—	1	—	—	—	—	
+/wsserver	An alias of /connect. Attempts to connect to the websocket server.	Yes	Yes	—	—	0‌[EE only]
+2‌[BE only]	—	—	—	—	—
+/xp	An alias of /experience‌[Java Edition only]. Adds or removes player experience.	Yes	Yes	Yes	2	1	—	—	—		—
+Hidden commands
+Information icon.svg
+This feature is exclusive to Bedrock Edition. 
+These commands are unavailable in general cases. Most of them can be accessed with a Websocket Server.
+
+Summary of Hidden Commands
+Command	Description	BE	EE	
+BE&EE OP level
+
+MP only				[]
+Removed commands
+Summary of Removed Commands
+Command	Description	Version Removed	Reason for Deletion	BE	EE	JE	JE OP level	BE&EE OP level	MP Only				[]
+Other removed commands
+Developer command
+Main article: developer commands
+Information icon.svg
+This feature is exclusive to Bedrock Edition and Education Edition. 
+Developer commands are only enabled in internal development builds of Bedrock Edition, and are not normally present in release versions.
+
+Agent commands
+Hydrogen.png
+This section describes an education-related feature. 
+This feature is available only in Education Edition or when enabling the "Education Edition" option in Bedrock Edition.
+Superseded by /agent
+
+/move
+/turn
+/attack
+/destroy
+/drop
+/dropall
+/inspect
+/inspectdata
+/detect
+/detectredstone
+/transfer
+/createagent
+/tpagent
+/collect
+/till
+/place
+/getitemcount
+/getitemspace
+/getitemdetail
+
+
+
+
+LUSH CAVES
+
+
+Lush caves generate underground at any height. They favor generating underneath biomes with high humidity values, which makes them most commonly found beneath dark forests, jungles, old growth taigas and wooded badlands. It is not possible for lush caves to generate beneath forests and grassland biomes like plains and savanna as they are not humid enough. Lush caves can sometimes generate beneath oceans and deserts.
+
+Azalea trees generate on any empty space above a lush cave, with roots consisting of rooted dirt and hanging roots that generate down until reaching the lush cave. This is most common at the surface, but they can sometimes generate inside caves if there is enough room.
+
+Underground, moss and ores covers the floors and ceilings, along with moss carpets, grass and azalea bushes on the floors. On the ceiling, vines and cave vines with glow berries grow down and light up the caves, and spore blossoms grow from the ceiling and drip water particles. A lush cave contains springs and shallow lakes with clay where dripleaf plants grow out of them. Sometimes these lakes generate dry.
+
+Players cannot spawn in a lush caves biome during the world generation.
+
+Bats, glow squid, tropical fish, and axolotls are the only passive mobs that spawn, with the latter being exclusive to the biome. While hostile mobs can spawn throughout the biome, many areas have a light level greater than 0 due to the pervasive glow berries. Most hostile mobs are therefore found in large caverns more than 10 blocks high and near borders with other cave biomes.
+
+In Java Edition, the mob spawn rate for lush caves is:
+
+Mob	Spawn weight	Group size
+Water ambient category
+Tropical Fish	1	8
+Underground water creature category
+Glow Squid	1	4–6
+Axolotl category
+Axolotl	1	4–6
+Ambient category
+Bat	1	8
+Hostile category
+Spider	100⁄516.25	4
+Zombie	95⁄516.25	4
+Zombie Villager	5⁄516.25	1
+Skeleton	100⁄516.25	4
+Creeper	100⁄516.25	4
+Slime[note 1]	100⁄516.25	4
+Enderman	10⁄516.25	1–4
+Witch	5⁄516.25	1
+Spider Jockey	1⁄516.25	1
+Chicken Jockey	0.25⁄516.25	1
+ Spawn attempt succeeds only in slime chunks.
+
+In Bedrock Edition :
+
+Mob	Spawn weight	Group size
+Water category
+Axolotl	10⁄110	4–6
+Tropical Fish[note 1]	25⁄110	1–3
+Tropical Fish[note 1]	75⁄110	3–5
+Passive category
+Glow Squid	1	2–4
+Hostile category
+Spider	99⁄495	1
+Zombie	94.25⁄495	2–4
+Zombie Villager	5⁄495	2–4
+Skeleton	80⁄495	1–2
+Creeper	100⁄495	1
+Slime[note 2]	100⁄495	1
+Enderman	10⁄495	1–2
+Witch	5⁄495	1
+Spider Jockey	1⁄495	1
+Chicken Jockey	0.75⁄495	1
+ Tropical fish try to spawn twice, one for random pattern and another try for 1 of 22 unique pattern.
+ Spawn attempt succeeds only in slime chunks.
+
+
+
+Amethyst Geode
+EDIT
+Amethyst Geode
+Amethyst Geode.png
+Amethyst Geode uncracked.png
+Biomes	
+Any Overworld biome
+
+Consists of	
+[]
+An amethyst geode is a structure-like terrain feature found in the underground of the Overworld. Amethyst geodes contain smooth basalt, calcite, and are the only source of amethyst items and blocks.
+
+
+Contents
+1	Generation
+2	Structure
+3	Data values
+3.1	ID
+4	History
+5	Issues
+6	Gallery
+6.1	Concept artwork
+6.2	Odd generation
+7	References
+exp-player-logo
+00:11 / 01:00
+Generation
+Amethyst geodes generate between Y=-64 and Y=30 regardless of whether "generate structures" is toggled on or off. Each chunk has a 1⁄24 chance to generate a geode. They override only caverns and mineshafts. Sometimes they are exposed on the surface, such as on beaches and underwater in oceans.
+
+Amethyst geodes consist of three layers: an outer layer of smooth basalt, a middle layer of calcite, and a hollow layer of primarily amethyst blocks, with 8.3% replaced by budding amethyst blocks instead. Amethyst crystals generate within the structure on budding amethyst. Geodes have a 95% chance of generating with a crack, exposing its inside. Caves, aquifers, and canyons cannot cut into geodes,[1] and as such are often obstructed by them, except in cases where the crack intersects a cavern.
+
+
+
+
+==============================================================================================================================================================
+                                            === end ===
+==============================================================================================================================================================
+
+
